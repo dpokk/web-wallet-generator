@@ -118,10 +118,7 @@ function App() {
       <header className="hero">
         <h1 className="hero-title">Wallet address generator</h1>
         <p className="hero-subtitle">
-          Generate and manage secure blockchain wallets directly in your browser.
-        </p>
-        <p className="hero-subtitle hero-subtitle--muted">
-          Create or import a BIP-39 seed phrase, then instantly derive Ethereum and Solana addresses — all locally, with zero data sent to any server.
+          Generate and manage secure blockchain wallets directly in your browser. Create or import a BIP-39 seed phrase, then instantly derive Ethereum and Solana addresses — all locally, with zero data sent to any server.
         </p>
       </header>
 

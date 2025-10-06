@@ -467,6 +467,7 @@ code {
   letter-spacing: 0.12em;
   font-size: 0.9rem;
   color: hsl(var(--muted-foreground));
+  pointer-events: none;
 }
 
 .icon-button {
