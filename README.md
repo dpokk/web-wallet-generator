@@ -15,9 +15,6 @@ This is a browser-based tool for producing deterministic Ethereum and Solana wal
 | BIP‑39 mnemonics | Generate and validate 12–24 word phrases | [`bip39`](https://github.com/bitcoinjs/bip39) |
 | HD wallet derivation | Deterministic child keys for each chain | [`ethers`](https://docs.ethers.org/), [`ed25519-hd-key`](https://github.com/dazza5000/ed25519-hd-key) |
 | Ed25519 keypairs | Solana-compatible signatures | [`@solana/web3.js`](https://solana-labs.github.io/solana-web3.js/), [`tweetnacl`](https://github.com/dchest/tweetnacl-js) |
-| React state & hooks | Track mnemonic draft, derived wallets, status toasts | `useState`, `useMemo`, `useEffect` |
-| Clipboard API | Copy mnemonic/private/public keys without leaving the app | `navigator.clipboard.writeText` |
-| Design tokens | Custom CSS variables for background, typography, and spacing | `src/index.css`, `src/App.css` |
 
 ## 🧩 Application Flow
 
@@ -26,7 +23,6 @@ This is a browser-based tool for producing deterministic Ethereum and Solana wal
 3. **Wallet derivation**
 	- Ethereum: mnemonic → seed → `HDNodeWallet.fromSeed` → derive path `m/44'/60'/index'/0'` → expose address/public/private.
 	- Solana: mnemonic → seed → `ed25519-hd-key` derive → `tweetnacl` → `Keypair.fromSecretKey` → Base58 public key.
-4. **Presentation** – Each wallet is rendered inside themed cards with masked private keys and copy buttons.
 
 ## 🛡️ Security Notes
 
@@ -34,7 +30,7 @@ This is a browser-based tool for producing deterministic Ethereum and Solana wal
 - Masked private keys are still present in the DOM; copy them only when you are ready to store them securely.
 - Avoid using real production mnemonics on machines you do not control. Treat this as an offline utility or development aid.
 
-## 🚀 Getting Started
+## 🚀 Local Setup
 
 ```bash
 git clone https://github.com/dpokk/web-wallet-generator.git
